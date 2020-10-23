@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <table>
+        <thead>
+            <tr>
+                <th width="200px">
+                    <b>Dni empleado</b>
+                </th>
+
+                <th width="100px">
+                    <b>Nombre</b>
+                </th>
+                <th width="180px">
+                    <b>Apellido Paterno</b>
+                </th>
+                <th width="180px">
+                    <b>Apellido Materno</b>
+                </th>
+
+            </tr>
+        </thead>
+        @foreach (EmpleadosModel Empleados in (EmpleadosModel[])ViewBag.Empleados)
+        {
+            <tr>
+                <td>
+                    @Empleados.Dni_empleado
+                </td>
+                <td>
+                    @Empleados.Nombre_empleado
+                </td>
+                <td>
+                    @Empleados.Ape_paterno
+                </td>
+                <td>
+                    @Empleados.Ape_materno
+                </td>
+                
+            </tr>
+        }
+
+
+    </table>
+</div>
